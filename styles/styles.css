@@ -1,0 +1,226 @@
+body {
+    background: #aedefc;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .wrapper {
+    border: 3px solid #fb929e;
+    border-radius: 10px;
+    background: #ffdfdf;
+    padding: 20px 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 7px 5px rgba(253,253,203, 0.8);
+    height: 130px;
+  }
+  
+  .btn__title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .btn__text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+  
+  .btn {
+    cursor: pointer;
+    border: 3px solid rgba(251, 146, 158, 0.5);
+    border-radius: 7px;
+    background: #f8fcfb;
+    transition: background-color 0.3s ease;
+    padding: 6px;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .magic-btn:hover {
+    background: #fbfae1;
+  }
+  
+  .sparkle {
+    position: absolute;
+    display: none;
+    pointer-events: none;
+  }
+
+  .arrows {
+    display: flex;
+    gap: 20px;
+  }
+
+  .right-arrow {
+    height: 50px;
+    margin-top: 25px;
+  }
+
+  .left-arrow {
+    height: 50px;
+    margin-top: 25px;
+  }
+
+  /* chat styles */
+  .chat {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 110%;
+    padding-top: 10px;
+}
+
+  .wrapper-chat {
+    border: 3px solid #fb929e;
+    border-radius: 10px;
+    padding: 20px 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 7px 5px rgba(253,253,203, 0.8);
+    background-color: #fafafa;
+    position: relative;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 450px;
+    width: 300px;
+  }
+
+  .wrapper-chat::before {
+    content: "";
+    background-image: url('../img/rabbits.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    top: -70px;
+    left: 20px;
+    z-index: 1;
+  }
+
+  .chat-input {
+    border: 3px solid #fb929e;
+    border-radius: 8px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 5px;
+    box-shadow: 5px 5px 5px rgba(189, 176, 176, 0.5);
+    width: 70%;
+  }
+
+  .chat-input:focus {
+    outline: none;
+}
+
+  .chat-window {
+    border: 3px solid #fb929e;
+    border-radius: 8px;
+    height: 100%;
+    box-shadow: 5px 5px 5px rgba(189, 176, 176, 0.5);
+    margin: 17px 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-y: auto;
+  }
+
+  .chat-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+  }
+
+  .btn-send {
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    border: 3px solid rgba(251, 146, 158, 0.5);
+    border-radius: 7px;
+    background: #f8fcfb;
+    transition: background-color 0.3s ease;
+    padding: 6px;
+    box-shadow: 5px 5px 5px rgba(189, 176, 176, 0.5);
+  }
+
+  .btn-send:hover {
+    background: #fbfae1;
+  }
+
+  .btn-location {
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    border: 3px solid rgba(251, 146, 158, 0.5);
+    border-radius: 7px;
+    background: #f8fcfb;
+    transition: background-color 0.3s ease;
+    padding: 6px;
+    margin-top: 15px;
+    box-shadow: 5px 5px 5px rgba(189, 176, 176, 0.5);
+    position: relative;
+  }
+
+  .btn-location::after {
+    content: "";
+    background-image: url('../img/globe.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 5%;
+    left: 60px;
+    z-index: 1;
+  }
+
+  .btn-location:hover {
+    background: #98d7ff56;
+  }
+
+  .user-input {
+    display: none;
+    background-color: #fbfae1;
+    border-radius: 5px;
+    border: 0.5px solid rgba(128, 128, 128, 0.308);
+    padding: 8px;
+    align-self: flex-end;
+    margin-bottom: 10px;
+    max-width: 70%;
+}
+
+.server-output {
+    display: none;
+    background-color: #e7e6e1;
+    border-radius: 5px;
+    padding: 8px;
+    margin-bottom: 10px;
+    max-width: 70%;
+}
+
+.location-output {
+    display: none;
+    background-color: #fbfae1;
+    border-radius: 5px;
+    border: 0.5px solid rgba(128, 128, 128, 0.308);
+    padding: 8px;
+    align-self: flex-end;
+    margin-bottom: 10px;
+    max-width: 70%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
