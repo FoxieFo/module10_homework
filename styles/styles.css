@@ -152,6 +152,7 @@ body {
     transition: background-color 0.3s ease;
     padding: 6px;
     box-shadow: 5px 5px 5px rgba(189, 176, 176, 0.5);
+    color: black;
   }
 
   .btn-send:hover {
@@ -170,6 +171,7 @@ body {
     margin-top: 15px;
     box-shadow: 5px 5px 5px rgba(189, 176, 176, 0.5);
     position: relative;
+    color: black;
   }
 
   .btn-location::after {
