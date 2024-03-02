@@ -55,6 +55,8 @@ const error = () => {
     errorMessage.style.display = 'block';
     errorMessage.classList.add('server-output');
     chatWindow.appendChild(errorMessage);
+
+    scrollToBottom(chatWindow);
   }
 
 const success = (position) => {
@@ -66,6 +68,8 @@ const success = (position) => {
     locationMessage.style.display = 'block';
     locationMessage.classList.add('user-input');
     chatWindow.appendChild(locationMessage);
+
+    scrollToBottom(chatWindow);
 }
 
 btnLocation.addEventListener('click', () => {
@@ -75,6 +79,8 @@ btnLocation.addEventListener('click', () => {
         errorMessage.style.display = 'block';
         errorMessage.classList.add('server-output');
         chatWindow.appendChild(errorMessage);
+
+        scrollToBottom(chatWindow);
     } else {
         let infoMessage = document.createElement('div');
         infoMessage.textContent = 'определение местоположения…';
@@ -82,5 +88,7 @@ btnLocation.addEventListener('click', () => {
         infoMessage.classList.add('user-input');
         chatWindow.appendChild(infoMessage);
         navigator.geolocation.getCurrentPosition(success, error);
+
+        scrollToBottom(chatWindow);
     }
 });
